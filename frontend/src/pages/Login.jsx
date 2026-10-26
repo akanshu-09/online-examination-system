@@ -6,7 +6,8 @@ export default function Login() {
   return (
     <div className="landing-page landing-auth-page">
       <header className="landing-nav">
-        <img src={logoImage} alt="Examora Logo" className="landing-nav-logo" />
+        <div className="landing-nav-brand">
+          <span>Examora</span></div>
       </header>
 
       <main className="landing-hero landing-login-landing-main">

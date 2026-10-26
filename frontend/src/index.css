@@ -1,4 +1,3 @@
-
 /* =========================================================
    01. Design tokens — colors, fonts, spacing and shadows
    ========================================================= */
@@ -148,7 +147,7 @@ a {
   font-size: 14px;
   font-weight: 500;
   color: var(--color-ink-muted);
-  transition: background 0.15s, color 0.15s;
+  transition: *background* 0.15s, color 0.15s;
 }
 
 .topbar-link:hover {
@@ -241,7 +240,7 @@ a {
   font-size: 15px;
   font-weight: 500;
   color: var(--color-ink-muted);
-  transition: background 0.15s, color 0.15s;
+  transition: *background* 0.15s, color 0.15s;
 }
 
 .mobile-nav-link:hover,
@@ -265,7 +264,7 @@ a {
   margin-top: 6px;
   width: 100%;
   text-align: left;
-  transition: background 0.15s;
+  transition: *background* 0.15s;
 }
 
 .mobile-nav-logout:hover {
@@ -332,7 +331,7 @@ a {
   font-size: 14px;
   font-weight: 500;
   color: var(--color-ink-muted);
-  transition: background 0.15s, color 0.15s;
+  transition: *background* 0.15s, color 0.15s;
 }
 
 .sidebar-link:hover {
@@ -407,7 +406,7 @@ a {
   font-size: 14px;
   padding: 10px 18px;
   cursor: pointer;
-  transition: background 0.15s, transform 0.05s, box-shadow 0.15s;
+  transition: *background* 0.15s, transform 0.05s, box-shadow 0.15s;
   white-space: nowrap;
 }
 
@@ -682,6 +681,7 @@ a {
   to {
     transform: rotate(360deg);
   }
+
 }
 
 .spin-icon {
@@ -728,7 +728,6 @@ a {
   flex-direction: column;
 }
 
-/* Navigation: edit padding/height here. The original default alignment is preserved. */
 .landing-nav {
   z-index: 50;
   display: flex;
@@ -776,6 +775,7 @@ a {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
 .landing-signin-title {
@@ -786,7 +786,6 @@ a {
   color: var(--color-ink);
 }
 
-/* Shared hero grid: spacing and vertical alignment. Landing columns are overridden by the landing modifier below. */
 .landing-hero {
   flex: 1;
   display: grid;
@@ -799,7 +798,6 @@ a {
   width: 100%;
 }
 
-/* Optional single-column hero variant; retained for existing consumers. */
 .landing-hero-single {
   grid-template-columns: 1fr;
   max-width: 720px;
@@ -820,7 +818,6 @@ a {
   margin-right: auto;
 }
 
-/* Text box alignment. Use text-align for the text inside the box. */
 .landing-hero-content {
   display: flex;
   justify-self: end;
@@ -864,7 +861,6 @@ a {
   margin-bottom: 32px;
 }
 
-/* Action buttons: horizontal alignment, wrapping and spacing. */
 .landing-cta-row {
   display: flex;
   gap: 14px;
@@ -880,6 +876,7 @@ a {
 }
 
 /* Exam preview illustration */
+
 .landing-hero-visual {
   display: flex;
   justify-content: end;
@@ -1014,6 +1011,7 @@ a {
 }
 
 /* Feature strip */
+
 .landing-features {
   background: transparent;
   border-top: none;
@@ -1059,7 +1057,6 @@ a {
   line-height: 1.5;
 }
 
-/* Outer register container: flex alignment and page padding. */
 .landing-register-main {
   flex: 1;
   display: flex;
@@ -1069,6 +1066,7 @@ a {
 }
 
 /* Shared login/register grid structure. Page-specific column sizes follow. */
+
 .landing-login-main,
 .landing-register-page-main {
   display: grid;
@@ -1077,17 +1075,16 @@ a {
   margin: 0 auto;
 }
 
-/* Login columns — keep these minimum widths to preserve the existing layout. */
 .landing-login-main {
   grid-template-columns: minmax(260px, 2.8fr) minmax(500px, 500px);
 }
 
-/* Align the login form within its grid column. */
 .landing-login-main .landing-register-wrap {
   justify-self: end;
 }
 
 /* Shared illustration container */
+
 .landing-login-visual {
   display: flex;
   align-items: center;
@@ -1106,29 +1103,32 @@ a {
   mix-blend-mode: multiply;
 }
 
-/* Landing modifier: edit desktop landing column widths here. Use alongside landing-hero. */
 .landing-login-landing-main {
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
   max-width: 1200px;
 }
 
 /* Landing illustration height */
+
 .landing-login-landing-visual {
   min-height: 360px;
 }
 
 /* Register columns and full-width grid */
+
 .landing-register-page-main {
   grid-template-columns: minmax(400px, 500px) minmax(0, 1fr);
   width: 100%;
 }
 
 /* Register illustration height */
+
 .landing-register-visual {
   min-height: 420px;
 }
 
 /* Shared form width, headings and fields */
+
 .landing-register-wrap {
   width: 100%;
   max-width: 440px;
@@ -1195,6 +1195,7 @@ a {
 }
 
 /* Landing footer */
+
 .landing-footer {
   text-align: center;
   padding: 18px 24px;
@@ -1462,7 +1463,7 @@ a {
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-md);
   cursor: pointer;
-  transition: border-color 0.15s, background 0.15s;
+  transition: border-color 0.15s, *background* 0.15s;
   background: var(--color-surface);
 }
 
@@ -1935,8 +1936,6 @@ table.data-table {
 
 /* =========================================================
    21. Responsive overrides — wider breakpoint first
-   Images remain before text/forms on tablet and mobile.
-   Hero align-self is retained because it can affect a flex item.
    ========================================================= */
 
 @media (max-width: 860px) {
@@ -2020,6 +2019,7 @@ table.data-table {
     max-width: none;
     margin-left: 0;
   }
+
 }
 
 @media (max-width: 640px) {
@@ -2107,4 +2107,5 @@ table.data-table {
   .result-stats {
     grid-template-columns: 1fr;
   }
+
 }
